@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exam Result</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .result-card {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #0606c9; /* Changed the heading color to a darker blue */
+      margin-bottom: 30px;
+    }
+    h2 {
+      text-align: center;
+      color: #28a745; /* Changed the result color to green */
+      font-weight: bold;
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+    .question {
+      margin-bottom: 10px;
+      font-weight: bold;
+      color: #343a40; /* Changed the question color to a darker gray */
+    }
+
+    .answer {
+      margin-bottom: 20px;
+    }
+
+    .correct-answer {
+      color: #28a745; /* Changed the correct answer color to green */
+      font-weight: bold;
+    }
+
+    .incorrect-answer {
+      color: #dc3545; /* Changed the incorrect answer color to red */
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="result-card">
+      <h1>Exam Result</h1>
+      <h2>{{ result }}</h2>
+    </div>
+  </div>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

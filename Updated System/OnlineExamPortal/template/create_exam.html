@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{ exam.name }}</title>
+  <!-- Add the Bootstrap CSS link -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f2f2f2;
+    }
+    .container {
+      padding-top: 40px;
+    }
+    .question-card {
+      margin-bottom: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      transition: transform 0.3s ease-in-out;
+    }
+    .question-card:hover {
+      transform: translateY(-5px);
+    }
+    .question-text {
+      font-weight: bold;
+      color: #343a40;
+    }
+    .choices-container {
+      margin-top: 10px;
+    }
+    .form-check-input[type="radio"] {
+      margin-right: 5px;
+    }
+    .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+    .btn-primary:hover {
+      background-color: #0069d9;
+      border-color: #0062cc;
+    }
+    .btn-primary:focus,
+    .btn-primary.focus {
+      box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+    }
+    .timer {
+      text-align: center;
+      color: #007bff;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .modal-header {
+      background-color: #007bff;
+      color: #fff;
+    }
+    .modal-title {
+      font-weight: bold;
+    }
+    .modal-body {
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="mt-4" style="text-align: center; color: #007bff;">{{ exam.name }}</h1>
+    <p><h4 style="color: #333; text-align: center;">{{ exam.description }}</h4></p>
+
+    <div class="timer" id="timer">{{ exam.duration }} mins</div>
+
+    <form method="post" action="{% url 'submit_exam' exam.id %}" id="examForm">
+      {% csrf_token %}
+      {% for question_form, choice_formset in question_forms %}
+        <div class="question-card">
+          <h5 class="question-text">Question:</h5>
+          <p class="card-text">{{ question_form.text.value }}</p>
+          <hr>
+          <div class="choices-container">
+            {% for choice_form in choice_formset %}
+              {% if choice_form.text.value %}
+                <div class="form-check">
+                  <input type="radio" name="question_{{ forloop.parentloop.counter }}" value="{{ choice_form.id.value }}" id="choice_{{ choice_form.id.value }}" class="form-check-input">
+                  <label for="choice_{{ choice_form.id.value }}" class="form-check-label">{{ choice_form.text.value }}</label>
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      {% endfor %}
+
+      <button type="submit" class="btn btn-primary mt-4" id="submitButton">Submit</button>
+    </form>
+  </div>
+
+  <div id="timesUpModal" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Time's Up!</h5>
+        </div>
+        <div class="modal-body">
+          <p>The time for the exam has ended. You can no longer submit your answers.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    // Function to start the timer
+    function startTimer(duration, display) {
+      var timer = duration * 60,
+        minutes,
+        seconds;
+      setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds + " mins";
+
+        if (--timer < 0) {
+          // Timer has reached 0, show the modal dialog and disable submit button
+          display.textContent = "Time's up!";
+          $("#timesUpModal").modal("show");
+          document.getElementById("submitButton").disabled = true;
+        }
+      }, 1000);
+    }
+
+    // Start the timer when the page loads
+    $(document).ready(function () {
+      var examDuration = {{ exam.duration }};
+      var display = document.getElementById("timer");
+      startTimer(examDuration, display);
+    });
+  </script>
+</body>
+</html>

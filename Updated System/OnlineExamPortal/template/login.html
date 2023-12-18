@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .card {
+            width: 350px;
+            background-color: #fff;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #0606c9;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            color: #343a40;
+            font-weight: bold;
+        }
+
+        .form-control {
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+        }
+
+        .btn-primary {
+            background-color: #0606c9;
+            border-color: #0606c9;
+            margin-top: 10px;
+        }
+
+        .btn-primary:hover {
+            background-color: #040486; /* Darker shade on hover */
+            border-color: #040486;
+        }
+
+        .btn-link {
+            color: #0606c9;
+            text-decoration: underline;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .btn-link:hover {
+            color: #040486; /* Darker shade on hover */
+        }
+
+        #signupForm {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="card-body">
+            <div id="loginForm">
+                <h5 class="card-title">Login</h5>
+                {% if error_message %}
+                    <div class="alert alert-danger" role="alert">
+                        {{ error_message }}
+                    </div>
+                {% endif %}
+                <form method="post" action="{% url 'login' %}">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                    <button type="button" class="btn btn-link" onclick="toggleForms()">Signup</button>
+                </form>
+            </div>
+
+            <div id="signupForm">
+                <h5 class="card-title">Signup</h5>
+                <form method="post" action="{% url 'signup' %}">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="signup-username">Username</label>
+                        <input type="text" class="form-control" id="signup-username" name="username" placeholder="Enter a username">
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-email">Email</label>
+                        <input type="email" class="form-control" id="signup-email" name="email" placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-password">Password</label>
+                        <input type="password" class="form-control" id="signup-password" name="password" placeholder="Enter a password">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Signup</button>
+                    <button type="button" class="btn btn-link" onclick="toggleForms()">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function toggleForms() {
+            var loginForm = document.getElementById("loginForm");
+            var signupForm = document.getElementById("signupForm");
+            
+            if (loginForm.style.display === "none") {
+                loginForm.style.display = "block";
+                signupForm.style.display = "none";
+            } else {
+                loginForm.style.display = "none";
+                signupForm.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>

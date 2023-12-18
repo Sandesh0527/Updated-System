@@ -1,0 +1,701 @@
+[{
+  "name": "Python ",
+  "description": "MCQ test of Python (Exam 1)",
+  "duration": 15,
+  "start_time": "2023-05-25T09:00:00Z",
+  "end_time": "2023-05-25T10:00:00Z",
+  "questions": [{
+      "text": "How is a code block indicated in Python?",
+      "marks": 5,
+      "choices": [{
+          "text": "Indentation",
+          "is_correct": true
+        },
+        {
+          "text": "Bracket",
+          "is_correct": false
+        },
+        {
+          "text": "Key",
+          "is_correct": false
+        },
+        {
+          "text": "lambda",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "text": "Which of the following concepts is not a part of Python?",
+      "marks": 5,
+      "choices": [{
+          "text": "Loops",
+          "is_correct": false
+        },
+        {
+          "text": "Pointers",
+          "is_correct": true
+        },
+        {
+          "text": "Dynamic Typing",
+          "is_correct": false
+        },
+        {
+          "text": "All of the above",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "text": "What is the output of the following Python code?\n\n```python\nx = 10\ny = 20\nz = x + y\nprint(z)\n```",
+      "marks": 5,
+      "choices": [{
+          "text": "10",
+          "is_correct": false
+        },
+        {
+          "text": "20",
+          "is_correct": false
+        },
+        {
+          "text": "30",
+          "is_correct": true
+        },
+        {
+          "text": "Error",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "text": "What will the output of the following Python code?\n\n```python\nx = [1, 2, 3]\ny = x\nx[0] = 0\nprint(y)\n```",
+      "marks": 5,
+      "choices": [{
+          "text": "[0, 2, 3]",
+          "is_correct": true
+        },
+        {
+          "text": "[1, 2, 3]",
+          "is_correct": false
+        },
+        {
+          "text": "[0, 1, 2, 3]",
+          "is_correct": false
+        },
+        {
+          "text": "[1, 0, 3]",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "text": "Which statement is used to exit from a loop in Python?",
+      "marks": 5,
+      "choices": [{
+          "text": "break",
+          "is_correct": true
+        },
+        {
+          "text": "exit",
+          "is_correct": false
+        },
+        {
+          "text": "quit",
+          "is_correct": false
+        },
+        {
+          "text": "stop",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "text": "Which built-in function is used to find the length of a list in Python?",
+      "marks": 5,
+      "choices": [{
+          "text": "count()",
+          "is_correct": false
+        },
+        {
+          "text": "len()",
+          "is_correct": true
+        },
+        {
+          "text": "size()",
+          "is_correct": false
+        },
+        {
+          "text": "length()",
+          "is_correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "name": "AIT Exam ",
+  "description": "MCQ test of HTML and its basics (Exam 2)",
+  "duration": 45,
+  "start_time": "2023-05-26T13:00:00Z",
+  "end_time": "2023-05-26T13:45:00Z",
+  "questions": [{
+      "text": "What does HTML stand for?",
+      "marks": 5,
+      "choices": [{
+          "text": "Hyperlink and Text Markup Language",
+          "is_correct": false
+        },
+        {
+          "text": "Hypertext Markup Language",
+          "is_correct": true
+        },
+        {
+          "text": "Hyper Text Manipulation Language",
+          "is_correct": false
+        },
+        {
+          "text": "High Text Markup Language",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "text": "Which HTML tag is used to define a hyperlink?",
+      "marks": 5,
+      "choices": [{
+          "text": "<a>",
+          "is_correct": true
+        },
+        {
+          "text": "<h>",
+          "is_correct": false
+        },
+        {
+          "text": "<p>",
+          "is_correct": false
+        },
+        {
+          "text": "<link>",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "text": "Which HTML element is used to define a table?",
+      "marks": 5,
+      "choices": [{
+          "text": "<table>",
+          "is_correct": true
+        },
+        {
+          "text": "<div>",
+          "is_correct": false
+        },
+        {
+          "text": "<section>",
+          "is_correct": false
+        },
+        {
+          "text": "<article>",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "text": "What is the correct HTML for creating a checkbox?",
+      "marks": 5,
+      "choices": [{
+          "text": "<input type='checkbox'>",
+          "is_correct": true
+        },
+        {
+          "text": "<input type='check'>",
+          "is_correct": false
+        },
+        {
+          "text": "<checkbox>",
+          "is_correct": false
+        },
+        {
+          "text": "<check>",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "text": "Which HTML tag is used to display a horizontal line?",
+      "marks": 5,
+      "choices": [{
+          "text": "<hr>",
+          "is_correct": true
+        },
+        {
+          "text": "<line>",
+          "is_correct": false
+        },
+        {
+          "text": "<break>",
+          "is_correct": false
+        },
+        {
+          "text": "<hline>",
+          "is_correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "name": "ADBMS EXAM",
+  "description": "MCQ test on Advanced DBMS(Exam 3)",
+  "duration": 10,
+  "start_time": "2023-05-26T13:00:00Z",
+  "end_time": "2023-05-26T13:45:00Z",
+  "questions": [{
+      "text": "Part of the entire database is shown by which level of abstraction?",
+      "marks": 5,
+      "choices": [{
+          "text": "Physical",
+          "is_correct": false
+        },
+        {
+          "text": "Conceptual",
+          "is_correct": true
+        },
+        {
+          "text": "View",
+          "is_correct": false
+        },
+        {
+          "text": "Logical",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "text": " Normalization is a process of restructuring a relation to ________.",
+      "marks": 5,
+      "choices": [{
+          "text": "Minimize duplication of data in a database",
+          "is_correct": true
+        },
+        {
+          "text": "Maximize duplication of data in a database",
+          "is_correct": false
+        },
+        {
+          "text": "Make it of uniform size",
+          "is_correct": false
+        },
+        {
+          "text": "Allow addition of data",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "text": "What are the ACID properties of a transaction?",
+      "marks": 5,
+      "choices": [{
+          "text": "Atomicity, consistency, Isolation, Durability",
+          "is_correct": true
+        },
+        {
+          "text": "Atomicity, consistency, Isolation, Database",
+          "is_correct": false
+        },
+        {
+          "text": "Atomicity, consistency, Inconsistence, Durability",
+          "is_correct": false
+        },
+        {
+          "text": "None",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "text": "The initial State of a transaction is known as ______.",
+      "marks": 5,
+      "choices": [{
+          "text": "Active",
+          "is_correct": true
+        },
+        {
+          "text": "Failed",
+          "is_correct": false
+        },
+        {
+          "text": "Aborted",
+          "is_correct": false
+        },
+        {
+          "text": "Partially Commited",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "text": "Which of the following is not a NO-SQL database?",
+      "marks": 5,
+      "choices": [{
+          "text": "Cassandra",
+          "is_correct": false
+        },
+        {
+          "text": "MongoDB",
+          "is_correct": false
+        },
+        {
+          "text": "SQL SERVER",
+          "is_correct": true
+        },
+        {
+          "text": "None of the above",
+          "is_correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "name": "Software Project Mangement",
+  "description": "MCQ test of SPM (Exam 4)",
+  "duration": 15,
+  "start_time": "2023-05-26T13:00:00Z",
+  "end_time": "2023-05-26T13:45:00Z",
+  "questions": [{
+      "text": "Which of the following is incorrect activity for the configuration management of a software system?",
+      "marks": 5,
+      "choices": [{
+          "text": "system management",
+          "is_correct": false
+        },
+        {
+          "text": "internship management",
+          "is_correct": true
+        },
+        {
+          "text": "change management",
+          "is_correct": false
+        },
+        {
+          "text": "Version management",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "text": "Which of the following is not considered as a risk in project management?",
+      "marks": 5,
+      "choices": [{
+          "text": "Specification delays",
+          "is_correct": false
+        },
+        {
+          "text": "Product competition",
+          "is_correct": false
+        },
+        {
+          "text": "Testing",
+          "is_correct": true
+        },
+        {
+          "text": "Staff turnover",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "text": "A 66.6% risk is considered as",
+      "marks": 5,
+      "choices": [{
+          "text": "very low",
+          "is_correct": false
+        },
+        {
+          "text": "low",
+          "is_correct": false
+        },
+        {
+          "text": "moderate",
+          "is_correct": false
+        },
+        {
+          "text": "high",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "text": "Quality planning is the process of developing a quality plan for-----",
+      "marks": 5,
+      "choices": [{
+          "text": "team",
+          "is_correct": false
+        },
+        {
+          "text": "project",
+          "is_correct": true
+        },
+        {
+          "text": "project manager",
+          "is_correct": false
+        },
+        {
+          "text": "customers",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "text": "The process each manager follows during the life of a project is known as______",
+      "marks": 5,
+      "choices": [{
+          "text": "Project Management",
+          "is_correct": false
+        },
+        {
+          "text": "Manager life cycle",
+          "is_correct": false
+        },
+        {
+          "text": "Project Management Life Cycle",
+          "is_correct": true
+        },
+        {
+          "text": "All of the mentioned",
+          "is_correct": false
+        }
+      ]
+    }
+  ]
+},
+
+{
+  "name": "Java",
+  "description": "MCQ test of Java and its Basics (Exam 5)",
+  "duration": 15,
+  "start_time": "2023-05-26T13:00:00Z",
+  "end_time": "2023-05-26T13:45:00Z",
+  "questions": [{
+      "text": "Who invented Java Programming?",
+      "marks": 5,
+      "choices": [{
+          "text": "Guido van Rossum",
+          "is_correct": false
+        },
+        {
+          "text": "James Gosling",
+          "is_correct": true
+        },
+        {
+          "text": "Dennis Ritchie",
+          "is_correct": false
+        },
+        {
+          "text": "Bjarne Stroustrup",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "text": " Which statement is true about Java?",
+      "marks": 5,
+      "choices": [{
+          "text": " Java is a code dependent programming language",
+          "is_correct": false
+        },
+        {
+          "text": "Java is a platform-dependent programming language",
+          "is_correct": false
+        },
+        {
+          "text": "Java is a platform-independent programming language",
+          "is_correct": true
+        },
+        {
+          "text": "Java is a code dependent programming language",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "text": "Which one of the following is not a Java feature?",
+      "marks": 5,
+      "choices": [{
+          "text": "Object-oriented",
+          "is_correct": false
+        },
+        {
+          "text": "Use of pointers",
+          "is_correct": true
+        },
+        {
+          "text": "Portable",
+          "is_correct": false
+        },
+        {
+          "text": "Dynamic and Extensible",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "text": "Which of these cannot be used for a variable name in Java?",
+      "marks": 5,
+      "choices": [{
+          "text": "identifier & keyword",
+          "is_correct": false
+        },
+        {
+          "text": "identifier",
+          "is_correct": false
+        },
+        {
+          "text": "keyword",
+          "is_correct": true
+        },
+        {
+          "text": "None of these",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "text": " What is the extension of java code files?",
+      "marks": 5,
+      "choices": [{
+          "text": ".java",
+          "is_correct": true
+        },
+        {
+          "text": ".js",
+          "is_correct": false
+        },
+        {
+          "text": ".txt",
+          "is_correct": false
+        },
+        {
+          "text": ".bat",
+          "is_correct": false
+        }
+      ]
+    }
+  ]
+},
+{
+  "name": "Optimization Techniuques  ",
+  "description": "MCQ test of Optimization Techniques(Exam 6)",
+  "duration": 20,
+  "start_time": "2023-05-26T13:00:00Z",
+  "end_time": "2023-05-26T13:45:00Z",
+  "questions": [{
+      "text": " _______are expressed in the form of in equities or equations.",
+      "marks": 5,
+      "choices": [{
+          "text": "Constraints",
+          "is_correct": false
+        },
+        {
+          "text": "Both i and iii",
+          "is_correct": true
+        },
+        {
+          "text": "Objective function",
+          "is_correct": false
+        },
+        {
+          "text": "None of the above",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "text": "Another term commonly used for activity slack time is?",
+      "marks": 5,
+      "choices": [{
+          "text": "total float",
+          "is_correct": true
+        },
+        {
+          "text": "free float",
+          "is_correct": false
+        },
+        {
+          "text": "independent",
+          "is_correct": false
+        },
+        {
+          "text": "None of above",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "text": "Decision theory is concerned with?",
+      "marks": 5,
+      "choices": [{
+          "text": "Methods of arriving at an optimal decision",
+          "is_correct": false
+        },
+        {
+          "text": "Selecting optimal decision in a sequential manner",
+          "is_correct": false
+        },
+        {
+          "text": "Analysis of information that is available",
+          "is_correct": false
+        },
+        {
+          "text": "All of the above",
+          "is_correct": true
+        }
+      ]
+    },
+    {
+      "text": "The______can be referred to as a graphical model of a decision process.",
+      "marks": 5,
+      "choices": [{
+          "text": "Decision Tree",
+          "is_correct": true
+        },
+        {
+          "text": "Expected Opportunity Loss (EOL)",
+          "is_correct": false
+        },
+        {
+          "text": "Expected Value of Perfect Information (EVPI)",
+          "is_correct": false
+        },
+        {
+          "text": "Expected Monetary Value (EMV)",
+          "is_correct": false
+        }
+      ]
+    },
+    {
+      "text": "Cumulative probabilities are found by?",
+      "marks": 5,
+      "choices": [{
+          "text": "Summing all the previous probabilities up to the current value of the variable",
+          "is_correct": true
+        },
+        {
+          "text": "Summing all the probabilities associated with a variable",
+          "is_correct": false
+        },
+        {
+          "text": "Simulating the initial probability distribution",
+          "is_correct": false
+        },
+        {
+          "text": "Any method one chooses",
+          "is_correct": false
+        }
+      ]
+    }
+  ]
+}
+]

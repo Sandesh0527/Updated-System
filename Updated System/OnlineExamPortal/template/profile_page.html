@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Profile</title>
+  <!-- Add the Bootstrap CSS link -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f2f2f2;
+    }
+    .profile-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .profile-card {
+      max-width: 400px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .profile-card .card-title {
+      color: #0606c9;
+      font-size: 30px;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+    .profile-card .profile-info {
+      margin-bottom: 15px;
+    }
+    .profile-card .profile-info span {
+      font-weight: bold;
+      color: #343a40;
+    }
+    .profile-card .profile-info p {
+      color: #6c757d;
+      margin-bottom: 0;
+    }
+    .logout-button {
+      margin-top: 30px;
+    }
+    .logout-button .btn-primary {
+      background-color: #dc3545;
+      border-color: #dc3545;
+      transition: background-color 0.3s ease-in-out;
+    }
+    .logout-button .btn-primary:hover {
+      background-color: #c82333;
+      border-color: #bd2130;
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-container">
+    <div class="profile-card">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">IIMS User Profile</h5>
+          <div class="profile-info">
+            <span>Username:</span>
+            <p>{{ results.username }}</p>
+          </div>
+          <div class="profile-info">
+            <span>Email:</span>
+            <p>{{ results.email }}</p>
+          </div>
+          <div class="profile-info">
+            <span>Date Joined:</span>
+            <p>{{ results.date_joined }}</p>
+          </div>
+        </div>
+        <div class="logout-button">
+          <a href="{% url 'logout' %}" class="btn btn-primary">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Add the Bootstrap JS link -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
